@@ -11,7 +11,7 @@ package org.usfirst.frc3360.Hyperion_3360_2013.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc3360.Hyperion_3360_2013.Robot;
 /**
- *
+ * Antoine.. on doit documenter le code!!!!
  */
 public class  Ascent_AngleFront extends Command {
     public Ascent_AngleFront() {
