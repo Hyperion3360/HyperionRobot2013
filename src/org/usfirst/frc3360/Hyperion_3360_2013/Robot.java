@@ -35,12 +35,19 @@ public class Robot extends IterativeRobot {
      * used for any initialization code.
      */
     public void robotInit() {
-	RobotMap.init();
+	    RobotMap.init();
         
+        // Our robot have 5 distinct sub system.
+        
+        // The drive train is a simple 4 wheel drive with a tank drive mode.
         driveTrain = new DriveTrain();
+        // The ascent is an elevator used to climb up the tower.
         ascent = new Ascent();
+        // The frisbee is responsible to shoot a frisbee at a proper time.
         frisbee = new Frisbee();
+        // The shooter angle is responsible to position the frisbee shooter at the good angle.
         shooterAngle = new ShooterAngle();
+        // The shooter spinner is responsible to prepare the frisbeen spinner wheel which shoot the frisbee.
         shooterSpinner = new ShooterSpinner();
         
         // This MUST be here. If the OI creates Commands (which it very likely
