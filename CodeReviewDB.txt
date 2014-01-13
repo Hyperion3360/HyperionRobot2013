@@ -1,0 +1,13 @@
+Code review of 2013 FRC 3360 robot code.
+David Beaudette, 13Jan14
+
+- Nice and clean code, easy to follow. 
+
+- AutonomousCommand class could extend CommandGroup  as in
+
+  http://wpilib.screenstepslive.com/s/3120/m/7952/l/97994-running-commands-during-the-autonomous-period
+
+- Recommended: Use Smart Dashboard test buttons in OI.java to test all commands.
+
+- Recommended: Use Smart Dashboard for all parameter numerical values in code; this allows modifying values without recompiling.
+             
