@@ -14,25 +14,30 @@ import org.usfirst.frc3360.Hyperion_3360_2013.Robot;
  *
  */
 public class  Canon_SetSpinnerSpeed extends Command {
-    public Canon_SetSpinnerSpeed() {
+    final double m_SpinnerSpeed;
+    public Canon_SetSpinnerSpeed(double spinningSpeed) {
+        m_SpinnerSpeed = spinningSpeed;
     }
     // Called just before this Command runs the first time
     protected void initialize() {
-        Robot.shooterSpinner.SetSpinnerSpeed(true);
+        Robot.shooterSpinner.SetDesiredSpeed(m_SpinnerSpeed);
+        Robot.shooterSpinner.SetSpinning(true);
     }
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     }
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
+        // This command execute until button is released.
         return false;
     }
     // Called once after isFinished returns true
     protected void end() {
+        Robot.shooterSpinner.SetSpinning(false);
     }
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
-        Robot.shooterSpinner.SetSpinnerSpeed(false);
+        end();
     }
 }

@@ -15,6 +15,7 @@ import org.usfirst.frc3360.Hyperion_3360_2013.Robot;
  */
 public class  DriveTrain_PistonPush extends Command {
     public DriveTrain_PistonPush() {
+        requires(Robot.driveTrain);
     }
     // Called just before this Command runs the first time
     protected void initialize() {
