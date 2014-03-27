@@ -87,6 +87,7 @@ public class Robot extends IterativeRobot {
         // this line or comment it out.
         if (autonomousCommand1 != null) autonomousCommand1.cancel();
         
+        // When we start the teleop, make sure that the deviator is not in the way.
         shooter_Deviation.deviatorOff();
         SmartDashboard.putBoolean("Shooter Deviator:", false);
     }
